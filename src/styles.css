@@ -12,13 +12,10 @@ margin-top: 3%;
 border: double 1px #000000;
 }
 
-#logo{
-    margin-top: 50%;
-}
 #imagen{
    
     width: 20%;
-    height: 900px;
+    height: 20px;
     float: left;
 }
 #btnGoogle, #btnFacebook{
