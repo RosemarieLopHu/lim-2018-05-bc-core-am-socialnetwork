@@ -1,10 +1,172 @@
+.benvenuto{
+    text-align: center;
+    margin-top: 5%;
+    color: rgb(131, 125, 125);
+    width: 70%;
 
-.hiden{
+}
+.container{
+    text-align: top;
+    margin-top: 0%;
+    float: center;
+    ;
+
+
+}
+body {
+
+    /* Ubicación de la imagen */
+    
+    background-image: url(../Vistas/fondo2.png);
+    
+    /* Para dejar la imagen de fondo centrada, vertical y
+    
+    horizontalmente */
+    
+    background-position: center center;
+    
+    /* Para que la imagen de fondo no se repita */
+    
+    background-repeat: no-repeat;
+    
+    /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+    
+    background-attachment: fixed;
+    
+    /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+    
+    background-size: cover;
+    
+    /* Se muestra un color de fondo mientras se está cargando la imagen
+    
+    de fondo o si hay problemas para cargarla */
+    
+  /*   background-color: #66999; */
+    background-color: rgba(158, 156, 156, 0.344);;
+    }
+div {
+    margin-top: 5px;
+}
+@media (min-width: 768px) {
+    .omb_row-sm-offset-3 div:first-child[class*="col-"] {
+        margin-left: 10%;
+    }
+}
+
+.omb_login .omb_authTitle {
+    text-align: center;
+	line-height: 100%;
+}
+	
+.omb_login .omb_socialButtons a {
+	color: white; 
+	opacity:0.9;
+}
+.omb_login .omb_socialButtons a:hover {
+    color: white;
+	opacity:1;    	
+}
+.omb_login .omb_socialButtons .omb_btn-facebook {background: #3b5998;}
+.omb_login .omb_socialButtons .omb_btn-twitter {background: #00aced;}
+.omb_login .omb_socialButtons .omb_btn-google {background: #c32f10;}
+
+
+.omb_login .omb_loginOr {
+	position: relative;
+	font-size: 1.5em;
+	color: #aaa;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+.omb_login .omb_loginOr .omb_hrOr {
+	background-color: #cdcdcd;
+	height: 1px;
+	margin-top: 0px !important;
+	margin-bottom: 0px !important;
+}
+.omb_login .omb_loginOr .omb_spanOr {
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: -0.6em;
+	margin-left: -1.5em;
+	background-color: white;
+	width: 3em;
+	text-align: center;
+}			
+
+.omb_login .omb_loginForm .input-group.i {
+	width: 2em;
+}
+.omb_login .omb_loginForm  .help-block {
+    color: red;
+}
+
+	
+@media (min-width: 768px) {
+    .omb_login .omb_forgotPwd {
+        text-align: right;
+		margin-top:10px;
+ 	}		
+}
+#logo {
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    background:#fff;
+    position: relative;
+    top: 10rem;
+    left: 10rem;
+  }
+  
+  /* #logo:before,
+  #logo:after {
+    content: "";
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+  }
+  
+  #logo:before {
+    top: 0;
+    left: -25px;
+  }
+  
+  #logo:after {
+    top: -25px;
+  }
+#logo {
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    background: red;
+    position: relative;
+    top: 10rem;
+    left: 10rem;
+    animation: beating 2s ease infinite;
+  } */
+  
+  @keyframes beating {
+    0% {
+        transform: rotate(45deg) scale(1);
+    }
+    50% {
+      transform: rotate(45deg) scale(2);
+    }
+    100% {
+        transform: rotate(45deg) scale(1);
+    }
+  }
+
+/* .hiden{
     display: none;
 }
 
 #logout{
-
 float: right;
 margin-right: 35%;
 padding: 3%;
@@ -82,4 +244,4 @@ aside{
 
 #sel{
     border:2px dotted #d9d9d9;
-}    
+}     */
