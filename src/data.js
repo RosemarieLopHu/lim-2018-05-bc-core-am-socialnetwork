@@ -1,18 +1,3 @@
-<<<<<<< HEAD
-=======
-//login de usuario existente
-const emaiLogin = document.getElementById('emaiLogin');
-const passwordLogin = document.getElementById('passwordLogin');
-const btnLogin = document.getElementById('btnLogin');
-//Cerrar Sesion
-const btnLogout = document.getElementById("btnLogout");
-//Post
-const bd=document.getElementById("bd");
-const post = document.getElementById("post");
-const btnSave= document.getElementById("btnSave");
-//Registro de usuario nuevo
-const registerUser = document.getElementById("registerUser");
->>>>>>> 028c44215a638c739583be5641622ce52664fac8
 const btnGoogle = document.getElementById("btnGoogle");
 const btnFacebook = document.getElementById("btnFacebook");
 const email = document.getElementById("email");
@@ -110,10 +95,7 @@ btnFacebook.addEventListener('click', ()=>{
         console.log(error.message);
         console.log(error.email);
         console.log(error.credential);
-<<<<<<< HEAD
      
-=======
->>>>>>> 028c44215a638c739583be5641622ce52664fac8
       });
 })
 
