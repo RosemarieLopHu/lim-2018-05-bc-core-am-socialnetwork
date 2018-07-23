@@ -1,24 +1,25 @@
+<<<<<<< HEAD
+=======
+//login de usuario existente
+const emaiLogin = document.getElementById('emaiLogin');
+const passwordLogin = document.getElementById('passwordLogin');
+const btnLogin = document.getElementById('btnLogin');
+//Cerrar Sesion
+const btnLogout = document.getElementById("btnLogout");
+//Post
+const bd=document.getElementById("bd");
+const post = document.getElementById("post");
+const btnSave= document.getElementById("btnSave");
+//Registro de usuario nuevo
+const registerUser = document.getElementById("registerUser");
+>>>>>>> 028c44215a638c739583be5641622ce52664fac8
 const btnGoogle = document.getElementById("btnGoogle");
 const btnFacebook = document.getElementById("btnFacebook");
-
 const email = document.getElementById("email");
 const password = document.getElementById("password");
-const btnSignin = document.getElementById("btnSignin");
+const btnUp = document.getElementById("btnUp");
 
-const btnLogout = document.getElementById("btnLogout");
-const btnRegistro = document.getElementById("btnRegistro");
-
-
-const bd=document.getElementById("bd");
-const btnSave= document.getElementById("btnSave");
-
-const posts= document.getElementById("posts");
-const logout = document.getElementById("logout");
-
-const textarea = document.getElementById("textarea");
-const post = document.getElementById("post");
-
-
+//const textarea = document.getElementById("textarea");
 
 window.onload = () => {
     firebase.auth().onAuthStateChanged(function (user) {
@@ -26,7 +27,7 @@ window.onload = () => {
             login.classList.remove("hiden");
             bd.classList.remove("hiden");
             posts.classList.remove("hiden");
-            logout.classList.add("hiden");
+            registerUser.classList.add("hiden");
             console.log('Inicio logueado');
             console.log(user);
             username.innerHTML = `Bienvenida  ${user.displayName}`;
@@ -37,15 +38,14 @@ window.onload = () => {
         } else {
             console.log('No está logueado')
             login.classList.add("hiden");
-            logout.classList.remove("hiden");
+            registerUser.classList.remove("hiden");
             posts.classList.add("hiden");
             bd.classList.add("hiden");
         }
     });
 }
 
-btnRegistro.addEventListener('click', () => {
-
+btnUp.addEventListener('click', () => {
     // Registrar Usuario FIREBASE
     firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
         .then(function () {
@@ -54,10 +54,11 @@ btnRegistro.addEventListener('click', () => {
         .catch(function (error) {
             console.log(error.code, error.message)
         });
+
 })
 
-btnSignin.addEventListener('click', () => {
-    firebase.auth().signInWithEmailAndPassword(email.value, password.value)
+btnLogin.addEventListener('click', () => {
+    firebase.auth().signInWithEmailAndPassword(emaiLogin.value, passwordLogin.value)
         .then(function () {
             console.log('Inicia Sesion')
         })
@@ -70,7 +71,7 @@ btnLogout.addEventListener('click', () => {
     firebase.auth().signOut().then(function () {
         console.log('Cerró sesión');
         login.classList.remove("hiden");
-        logout.classList.add("hiden");
+        registerUser.classList.add("hiden");
     })
         .catch(function (error) {
             console.log('Error al cerrar sesión');
@@ -89,14 +90,11 @@ btnGoogle.addEventListener('click', ()=>{
        //writeUserData recibe parametros 
        writeUserData(user.uid, user.displayName, user.email, user.photoURL);
       }).catch(function(error) {
-       
         console.log(error.code);
         console.log(error.message);
         console.log(error.email);
         console.log(error.credential);
-     
-      });
-
+        });
 })
 
 btnFacebook.addEventListener('click', ()=>{
@@ -112,11 +110,12 @@ btnFacebook.addEventListener('click', ()=>{
         console.log(error.message);
         console.log(error.email);
         console.log(error.credential);
+<<<<<<< HEAD
      
+=======
+>>>>>>> 028c44215a638c739583be5641622ce52664fac8
       });
-
 })
-
 
 function writeUserData(userId, name, email, imageURL){
     firebase.database().ref('users/' + userId).set({
@@ -139,8 +138,7 @@ function writeNewPost(uid, body){
     updates['/posts/' + newPostKey] = postData;
     //se almacenan post por usuario
     updates['/user-posts/' + uid + '/' + newPostKey] = postData;
-
-    firebase.database().ref().update(updates);
+   firebase.database().ref().update(updates);
     return newPostKey;
 }
 
@@ -157,26 +155,22 @@ console.log(userNom);
  //var logo = document.createElement("img");
  //logo.setAttribute("src", "http://subirimagen.me/uploads/20180717121119.jpg");
  
-
-
  var nomUsuario = document.createElement("label");
- nomUsuario.setAttribute("for", "");
- nomUsuario.setAttribute("type", "label");
+       nomUsuario.setAttribute("for", "");
+        nomUsuario.setAttribute("type", "label");
 
  var btnUpdate = document.createElement("input");
- btnUpdate.setAttribute("value", "Update");
- btnUpdate.setAttribute("type", "button");
+       btnUpdate.setAttribute("value", "Update");
+       btnUpdate.setAttribute("type", "button");
+
  var btnDelete = document.createElement("input");
- btnDelete.setAttribute("value","Delete");
- btnDelete.setAttribute("type","button");
+       btnDelete.setAttribute("value","Delete");
+       btnDelete.setAttribute("type","button");
+
  var contPost = document.createElement('div');
  //var textPost = document.createElement('p');
-
-
  var textPost = document.createElement('textarea');
  textPost.setAttribute("id", newPost);
- 
-
  textPost.innerHTML= post.value;
  nomUsuario.innerHTML = userNom + "  publicó...";
  textPost.disabled= true;
@@ -199,16 +193,11 @@ console.log(userNom);
     btnUpdate.addEventListener('click',()=>{
         textPost.disabled= false;
         btnUpdate.setAttribute("value", "Guardar");
-
-        
-
+      
         const newUpdate = document.getElementById(newPost);
-
-        //alert("El post ha sido modificado correctamente");
-        
+        //alert("El post ha sido modificado correctamente");     
         const nuevoPost ={
-       
-        body : newUpdate.value,
+               body : newUpdate.value,
         };
 
         var updatesUser = {};
@@ -240,3 +229,5 @@ console.log(userNom);
 function reload_page(){
     window.location.reload();
 }
+
+
