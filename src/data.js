@@ -125,14 +125,9 @@ btnSave.addEventListener('click',()=>{
   post.value = '';
   listAllPost();
 });
-/*btnUpdate.addEventListener('click',);
-btnDelete.addEventListener('click',); */
-//borrando post
-/* const btnDel = document.querySelector('.');
-btnDel.addEventListener('click', () => {
-  firebase.ref('/post/' + post.uid).remove()
-}) */
+/*btnUpdate.addEventListener('click',); */
 
-function eliminar(){
-  const fireRef=firebase.database().ref('')
+const eliminar = () => {
+
+
 }
