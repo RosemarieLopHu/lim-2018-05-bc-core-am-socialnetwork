@@ -19,20 +19,22 @@ let updates = {};
 }
 
 //Eliminar post
-const deletePost = (newPostKey) => {
-  if (confirm('¿Estas Seguro de Eliminar tu publicaión?'))
-    {
-        const uid = firebase.auth().currentUser.uid;
-        firebase.database().ref().child('/posts/' + newPostKey).remove();
-        firebase.database().ref().child('/user-posts/' + uid + '/' + newPostKey).remove();
-        while (posts.firstChild)posts.removeChild(posts.firstChild);
-        window.location.reload();
-    }else{
-      alert('Se procedió a cancelar la eliminación');}
-    }
+firebase.database().ref('users/' + userId).remove({
+  username: name,
+  email: email,
+  profile_picture : imageUrl
+}, function(error) {
+  if (error) {
+    // The write failed...
+  } else {
+    alert('Se procedió a cancelar la eliminación');
+    // Data saved successfully!
+  }
+});
+
 
 //Prueba DELETE
-/* const deletePost = () => {
+const deletePost = () => {
   const fireRef=firebase.database.ref("Users");
   fireRef.remove()
   .then(function(){
@@ -41,29 +43,12 @@ const deletePost = (newPostKey) => {
   .catch(function(){
     console.log("Remove failed:"+ error.message)
   })
-} */
+} 
 
 // likes
 
 
 // pintar las publicaciones
-const showPost = () => { 
-    firebase.database().ref('posts/')
-    .on('value', (postsRef) =>{
-      const posts = postsRef.val();
-      const content = document.getElementById('content');
-      content.innerHTML='';
-      let userId = firebase.auth().currentUser.uid;
-      const crud = (id) => {
-        return `<div class="crud">
-        <button onclick="postEdit('${id}')" class="btnSave"></button>
-        <button onclick="editPost('${id}')" class="btnEdit"></button>
-        <button onclick="deletePost('${id}')" id="btnDelete"></button>
-        </div>`
-      }
-    })
-    ;
-}
 
 const listAllPost = () => {
   let data = '';

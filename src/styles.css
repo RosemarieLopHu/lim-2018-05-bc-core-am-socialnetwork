@@ -1,5 +1,5 @@
 .hiden{  display: none;}
-#registerUser{  margin-left: 35%; margin-top: 10%; float: left; width: 30%;  background: #f8f7f9;text-align: center;background-image:url(img/fondo2.png);padding: 5%;}
+#registerUser{  margin-left: 35%; margin-top: 10%; float: left; width: 30%;  background: #f8f7f9;text-align: center;padding: 5%;}
 #logo{   float: right; width: 80px;height: 70px;}
 /* #btnGoogle, #btnFacebook{ width: 30%; height: 5%; padding: 2%; margin: 1%; }
 #btnGoogle{ background:#E00415 ; color: #ffffff; border-color: #E00415  ;}
