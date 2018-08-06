@@ -20,16 +20,28 @@ let updates = {};
 
 //Eliminar post
 const deletePost = (newPostKey) => {
- if (confirm('¿Estas Seguro de Eliminar tu publicaión?'))
+  if (confirm('¿Estas Seguro de Eliminar tu publicaión?'))
     {
         const uid = firebase.auth().currentUser.uid;
         firebase.database().ref().child('/posts/' + newPostKey).remove();
         firebase.database().ref().child('/user-posts/' + uid + '/' + newPostKey).remove();
         while (posts.firstChild)posts.removeChild(posts.firstChild);
         window.location.reload();
+    }else{
+      alert('Se procedió a cancelar la eliminación');}
     }
-else {alert('Se procedió a cancelar la eliminación');}  
-}
+
+//Prueba DELETE
+/* const deletePost = () => {
+  const fireRef=firebase.database.ref("Users");
+  fireRef.remove()
+  .then(function(){
+    console.log("Borrar Post")
+  })
+  .catch(function(){
+    console.log("Remove failed:"+ error.message)
+  })
+} */
 
 // likes
 
