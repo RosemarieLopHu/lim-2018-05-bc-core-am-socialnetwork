@@ -20,19 +20,18 @@ if(btnRegistro){
     firebase.auth().createUserWithEmailAndPassword(inputEmail.value, inputPassword.value)
       .then((result) => {
         console.log('CREATE USER/PASSWORD SUCCESS: ',result);
-        writeUserData(result.user);
         const user = firebase.auth().currentUser;
         user.sendEmailVerification()
-          .then(() => {
-            console.log('SEND EMAIL SUCCESS');
-            let emailMessage = document.getElementById('emailMessage');
-            emailMessage.classList.remove("hiden");
-            emailMessage.classList.add("show");
-            emailMessage.innerHTML = 'Te hemos enviado un e-mail para activar tu cuenta';
-          }).catch((error) => {
-            console.error('SEND EMAIL ERROR: ',error);
-          });
-          location.href = '/muro.html';
+        .then(() => {
+          console.log('SEND EMAIL SUCCESS');
+          let emailMessage = document.getElementById('emailMessage');
+          emailMessage.classList.remove("hiden");
+          emailMessage.classList.add("show");
+          emailMessage.innerHTML = 'Te hemos enviado un e-mail para activar tu cuenta';
+        }).catch((error) => {
+          console.error('SEND EMAIL ERROR: ',error);
+        });
+        writeUserData(result.user);
     }).catch((error) => {
       console.error('CREATE USER/PASSWORD ERROR: ', error);
     });
@@ -107,7 +106,7 @@ if(btnLogout){
     firebase.auth().signOut()
       .then(()=> {
         console.log('LOGOUT SUCCESS');
-        location.href = '/index.html';
+        location.href = 'index.html';
       })
       .catch((error)=> {
         console.error('LOGOUT ERROR: ', error);  
@@ -129,7 +128,7 @@ const writeUserData = (user) => {
       console.log('ocurrio un error: ', error);
     }else{
       console.log('save success!');
-      location.href = '/muro.html';
+      location.href = 'muro.html';
     }
   });
 }

@@ -1,10 +1,10 @@
-
+//Llamando datos del firebase
 let currentUser = {};
 
 window.onload = () => {
     verificateUserAuth();
 }
-
+//Verificacion de autenticacion de usuario
 const verificateUserAuth = () => {
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
@@ -23,7 +23,7 @@ const verificateUserAuth = () => {
                 }
             });
         }else{
-            location.href = '/index.html';
+            location.href = 'index.html';
         }
     }); 
 };
@@ -101,6 +101,7 @@ const listAllPost = () => {
         if(posts){
             const postKeys = Object.keys(posts);
             postKeys.forEach( (post, index) => {
+                
                 data += `
                         <div class="row justify-content-center postSolo">
                             <div class="col-2">
