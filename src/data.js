@@ -127,7 +127,64 @@ btnSave.addEventListener('click',()=>{
 });
 /*btnUpdate.addEventListener('click',); */
 
-const eliminar = () => {
-
-
-}
+/* const eliminar = () => {
+  firebase.database().ref('post');
+  eliminar.remove('post/')
+  .then(function(){
+    console.log('post eliminado')
+  })
+  .catch(function(error){
+    console.log('remove failed'+ error.mensaje)
+  })
+} */
+/*  var db = firebase.database();                   
+ var ref = db.ref(); 
+ var survey=db.ref(path+'/'+path);    //Eg path is company/employee                
+ survey.child(key).remove(); 
+  */
+/*  //contador de likes
+ function toggleStar(postRef, uid) {
+  postRef.transaction(function(post) {
+    if (post) {
+      if (post.likes && post.likes[uid]) {
+        post.likesCount--;
+        post.likes[uid] = null;
+      } else {
+        post.likesCount++;
+        if (!post.likes) {
+          post.likes = {};
+        }
+        post.likes[uid] = true;
+      }
+    }
+    return post;
+  });
+}  */
+/* let btnLike = document.createElement("input");
+btnLike.setAttribute("value", "Like");
+btnLike.setAttribute("type", "button");
+let cantLikes = document.createElement("label");
+cantLikes.setAttribute("for", "");
+cantLikes.setAttribute("type", "label");
+let contPost = document.createElement('div');
+//var textPost = document.createElement('p');
+let textPost = document.createElement('textarea');
+textPost.setAttribute("id", idDeunpost);
+textPost.innerHTML = post.value;
+nomUsuario.innerHTML = userNom + "  publicó...";
+textPost.disabled = true;
+ let contador = 0;
+btnLike.addEventListener('click', () => {
+     if (userId = 0) {
+        console.log("Debe estar logueado");
+    }
+    else {
+        contador++;
+        if (contador == 1) {
+            cantLikes.innerText = contador;
+        }
+        else {
+            alert("Solo puedes dar 1 like");
+        }
+     }
+}); */

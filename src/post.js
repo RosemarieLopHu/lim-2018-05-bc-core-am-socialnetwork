@@ -30,7 +30,7 @@ const listAllPost = () => {
   
   postRef.on('value', function(snapshot){
     const posts = snapshot.val();
-    console.log (posts)
+    /* console.log (posts) */
     const postKeys = Object.keys(posts);
    
      postKeys.forEach( post => {
@@ -51,6 +51,7 @@ const listAllPost = () => {
                   <div class="col-12">
                     <input type="button" class="btn btn-primary" value="Editar">
                     <input onclick ='Eliminar()' type="button" class="btn btn-primary" value="Eliminar">
+                    <i class="fas fa-heart" id="hola" onclick="like()" ></i><span id="contador"></span>
                   </div>
                 </div>
               </form>
@@ -91,3 +92,38 @@ const listAllPost = () => {
 
 }
 
+
+/* //Contador de likes (btnLikes)
+const btnLikes = document.createElement('i');
+const contadorheart = document.createElement('span');
+heart.appendChild(contadorheart);
+heart.classList.add('fa', 'fa-heart', 'heart');
+
+//evento click del corazón
+let contadorComentario = [];
+btnLikes.addEventListener('click', ()=> {
+  if (btnLikes.classList.toggle('red')){
+    contadorComentario++;
+  }else{
+    contadorComentario--;
+  }
+  return contadorheart.innerHTML = contadorComentario;
+})
+
+//Editar
+const edit = document.createElement('i');
+edit.classList.add('fas', 'fa-pencil-alt');
+//Evento click editar
+edit.addEventListener('click', ()=> {
+  contenedorElemento.contentEditable = true;
+  contenedorElemento.addEventListener('keydown', (event)=> {
+    if (event.which == 13){
+      let confirmarEditar = confirm('¿Estas seguro que quieres modificar tu comentario?');
+      if (confirmarEditar == true) {
+        contenedorElemento.removeAttribute('contentEditable');
+      }
+    }
+  })
+})
+
+ */
