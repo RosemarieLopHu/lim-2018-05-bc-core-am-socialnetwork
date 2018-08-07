@@ -118,6 +118,7 @@ const listAllPost = () => {
                                         <div class="col-12">
                                             <input id="btnEditar" type="button" class="btn btn-primary" value="Editar" onClick="editar('${currentUser.uid}','${postKeys[index]}')">
                                             <input id="btnEliminar" type="button" class="btn btn-primary" value="Eliminar" onClick="eliminar('${currentUser.uid}','${postKeys[index]}')">
+                                            <input id="btnLikes" type="button" class="btn btn-primary" onClick="likes('${currentUser.uid}','${postKeys[index]}')">
                                         </div>
                                     </div>
                                 ` : '' }
