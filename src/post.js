@@ -1,17 +1,17 @@
 //creación de nuevo post
 const writeNewPost = (uid, displayName, photoURL, mensaje, isPublic, likes) => {
-    const postData = {
-      uid: uid,
-      displayName: displayName,
-      photoURL: photoURL,
-      mensaje: mensaje,
-      isPublic: isPublic,
-      likes: likes
-    };  
-// Get a key for a new Post
-let newPostKey = firebase.database().ref().child('posts').push().key;
-// Write the new post's data simultaneously in the posts list and the user's post list.
-let updates = {};
+  const postData = {
+    uid: uid,
+    displayName: displayName,
+    photoURL: photoURL,
+    mensaje: mensaje,
+    isPublic: isPublic,
+    likes: likes
+  };
+  // Get a key for a new Post
+  let newPostKey = firebase.database().ref().child('posts').push().key;
+  // Write the new post's data simultaneously in the posts list and the user's post list.
+  let updates = {};
   updates['/posts/' + newPostKey] = postData;
   updates['/user-posts/' + uid + '/' + newPostKey] = postData;
 
@@ -23,15 +23,15 @@ const listAllPost = () => {
   let data = ' ';
   let postRef = firebase.database().ref('posts/');
   let user = firebase.auth().currentUser.uid;
-  
- // let userRef = firebase.database().ref('users/');
-  
-  postRef.on('value', function(snapshot){
-    const posts = snapshot.val(); 
+
+  // let userRef = firebase.database().ref('users/');
+
+  postRef.on('value', function (snapshot) {
+    const posts = snapshot.val();
     const postKeys = Object.keys(posts);
-   
-     postKeys.forEach( post => {
-      if(posts[post].isPublic){    
+
+    postKeys.forEach(post => {
+      if (posts[post].isPublic) {
         data += `
           <div class="row justify-content-center hiden postSolo">
             <figure class="col-2">
@@ -54,9 +54,9 @@ const listAllPost = () => {
             </div>  
           </div>                 
         `;
-        
-      }  else {
-        if(posts[post].uid===user){ 
+
+      } else {
+        if (posts[post].uid === user) {
           data += `
           <div class="row justify-content-center hiden postSolo">
             <figure class="col-2">
@@ -79,21 +79,36 @@ const listAllPost = () => {
             </div>  
           </div>                 
         `;
-        } 
+        }
       }
     });
     let allPosts = document.getElementById('allPosts');
-    allPosts.innerHTML = data; 
+    allPosts.innerHTML = data;
   });
 
 }
 
 const Eliminar = (newPostKey) => {
   let uid = firebase.auth().currentUser.uid;
-  firebase.database().ref.child('user-posts/'+ uid + newPostKey).remove();
-  firebase.database().ref().child('posts/'+ newPostKeyey).remove();
+  firebase.database().ref.child('user-posts/' + uid + newPostKey).remove();
+  firebase.database().ref().child('posts/' + newPostKeyey).remove();
   while (allPosts.firstChild) allPosts.removeChild(allPosts.firstChild);
-    alert('Post eliminado');
-  location.reload();  
+  alert('Post eliminado');
+  location.reload();
 }
-     
+//Contador de likes
+const btnLikes = (id, likes) => {
+  bd.collection("users").post(id).update({
+    likes: parseInt(likes) + 1
+  }).then(() => {
+    const btnLikes = document.querySelector('#' + id + ' .likes');
+    let numLike = likes
+    //  console.log(numLike)
+    btnLikes.innerHTML += numLike;
+  })
+    .catch((error) => {
+      // The document probably doesn't exist.
+      console.error("Error updating document: ", error);
+    });
+
+}

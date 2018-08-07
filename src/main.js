@@ -1,3 +1,21 @@
+// guardando los datos en database
+const writeUserData = (user) => {
+
+  const userData = {
+    uid: user.uid,
+    displayName: user.displayName === null ? user.email : user.displayName,
+    photoURL: user.photoURL === null ? 'https://freeiconshop.com/wp-content/uploads/edd/chef-outline.png' : user.photoURL
+  }
+  
+  firebase.database().ref('users/' + userData.uid).set(userData, function(error){
+    if(error){
+      console.log('ocurrio un error: ', error);
+    }else{
+      console.log('save success!');
+    }
+  });
+  }
+  
 const registerVal = (email, password) => {
   firebase.auth().createUserWithEmailAndPassword(email, password)
     .then((result) => {
@@ -49,15 +67,17 @@ const verificar = () => {
 };
 
 const facebookLogin = () => {
-  let provider = new firebase.auth.FacebookAuthProvider();
+  const provider = new firebase.auth.FacebookAuthProvider();
   provider.setCustomParameters({
   'display': 'popup'
   });
   firebase.auth().signInWithPopup(provider)
     .then((result) => {
       writeUserData(result.user);
-  }, console.log('Facebook')).catch((error)=> {
-    alert('err'+error.message);
+      window.location.href = 'muro.html'
+  })
+  .catch((error)=> {
+    alert('err'+ error.message);
     console.log(error.code);
     console.log(error.message);
     console.log(error.email);
@@ -66,31 +86,15 @@ const facebookLogin = () => {
 };
 
 const gmailLogin = () => {
-  let provider = new firebase.auth.GoogleAuthProvider();
+  const provider = new firebase.auth.GoogleAuthProvider();
   firebase.auth().signInWithPopup(provider)
   .then((result)=> {
     writeUserData(result.user);
-  },console.log('gmail'));
+    window.location.href = 'muro.html'
+  })
 };
 
-// guardando los datos en database
-const writeUserData = (user) => {
 
-  const userData = {
-    uid: user.uid,
-    displayName: user.displayName === null ? user.email : user.displayName,
-    photoURL: user.photoURL === null ? 'https://freeiconshop.com/wp-content/uploads/edd/chef-outline.png' : user.photoURL
-  }
-  
-  firebase.database().ref('users/' + userData.uid).set(userData, function(error){
-    if(error){
-      console.log('ocurrio un error: ', error);
-    }else{
-      console.log('save success!');
-    }
-  });
-  }
-  
 
 
    

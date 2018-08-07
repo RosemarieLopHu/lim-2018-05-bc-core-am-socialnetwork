@@ -1,19 +1,32 @@
 .hiden{  
     display: none;
 }
-#registerUser{  
+body {
+    background: url(https://st2.depositphotos.com/1013886/10127/i/950/depositphotos_101275302-stock-photo-healthy-eating-background-top-view.jpg)
+}
+/* #registerUser{  
     margin-left: 35%; margin-top: 10%; float: left; width: 30%;  background: #f8f7f9;text-align: center;padding: 5%;}
 #logo{   float: right; width: 80px;height: 70px;}
 
 p { margin-bottom: 10%;}
 
 
-#email,#password{ margin: 2%; width: 80%;  }
+#email,#password{ margin: 2%; width: 80%;  } */
 /*#formulario{ border: solid 3px #000000; height: 900px;}*/
-#bd{ border-top: solid 10px #ffffff; float: right; width: 100%; height: 800px; background: #f8f7f9;text-align: center;    }
-.form-inline { width: 50%;}
-#navbar{border-bottom: solid 2px#ff4d94;}
-
+#bd {
+    border-top: solid 10px #ffffff; 
+    float: right; 
+    width: 100%; 
+    height: 800px; 
+    background: #f8f7f9;
+    text-align: center;
+}
+.form-inline { 
+    width: 50%;
+}
+#navbar {
+    border-bottom: solid 2px#ff4d94;
+}
 
 .input-contrast {
     background-color: #fafbfc;
