@@ -44,8 +44,9 @@ A continuación una lista redes sociales del Perú con el enfoque a comida salud
 7. limaorganicaperu (Instagram)
 [_Fuente_](https://peru21.pe/vida/vida-saludable-conoce-paginas-facebook-comparten-consejos-vida-saludable-393140)
 
-![Vista 1](dist/img/Tabla.png)
-![Vista Benchmark](dist/img/Lienzo.png)
+    ![Vista 1](dist/img/Tabla.png)
+
+    ![Vista Benchmark](dist/img/Lienzo.png)
 
 Revisando a nuestras competencias podemos concluir que nuestra página tiene que tener una interfaz comun o similar a las redes sociales de Facebook e Instagram, para que al usuario se le haga mas familiar.A la vez observamos que debe tener un área para que en usuario comente.
 En el siguinte link se observará nuestra [_definición del producto._](https://docs.google.com/document/d/1q-1k9ianTY0HQ5LOBt10V5K4uRi4vdY1YQ5ix7Af2Ko/edit#heading=h.kjleo72egggi)
@@ -59,14 +60,14 @@ En esta etapa se entrevistó [_Guía de Preguntas_](https://docs.google.com/docu
 
 ### Segunda Etapa
 Luego de la comprensión del problema a resolver y la interpretación de las necesidades se procede con la arquitectura de la información documentada.
-#### Sketch 
+#### **Sketch**
 Al desarrollar el prototipo del producto basado en la información adquirida a través de la investigación de usuarios nos permite evaluar su efectividad de los mismos con los futuros usuarios e identificar problemas antes de llevar a producción. A continuación los grados de efectividad de los wireframes.
 
-**Prototipo de baja fidelidad:**
+* **Prototipo de baja fidelidad:**
 Nos ayudó principalmente a plasmar las primeras ideas y los primeros ajustes sin invertir demasiado detalle y tiempo. en el siguiente link se aprecia las versiones Desktop y móvil.
 [_Prototipo desktop y móvil_](https://photos.app.goo.gl/nQPVMFpoaJMcFJB56)
 
-**Prototipo de alta fidelidad:**
+* **Prototipo de alta fidelidad:**
 Aquí definimos los aspectos visuales que le darán identidad al producto: Paletas de colores, tipografías, iconografía, jerarquía.
 [_Prototipo desktop_](https://photos.app.goo.gl/LK6beUtECnkQMe2t8)
 [_Prototipo móvil_](https://photos.app.goo.gl/hbkuo1R4c9dqxEno9)
@@ -74,12 +75,12 @@ Aquí definimos los aspectos visuales que le darán identidad al producto: Palet
 ### Tercera Etapa
 Luego de materializar las ideas, prototipar la información se procede a medir y a evaluar la entrega.
 
-####Test a Usuarios:
-**Test al prototipo de baja fidelidad:**
+#### Test a Usuarios:
+* **Test al prototipo de baja fidelidad:**
 La primera observación que nos realizó el usuario era que no podia saber de que se traba la página web,además de que no tenia un nombre, nos sugirió que coloquemos una pequeña descripción sobre  de qué se trataba nuestra página. A continuación el link del test del prototipo de baja fidelidad
 [_Testing_](https://photos.google.com/share/AF1QipPm7NAYRf9lmHNrsHrikDCPT6RHwCWyYppWygm07W-839A3IhlkHyFnOlnyN68Zow?hl=es-419&key=QTRtdVExYjBCYjl0SGhjQ3RDZGFhQl9JUGtXWHln)
 
-**Test al prototipo de alta fidelidad:**
+* **Test al prototipo de alta fidelidad:**
 En esta fase el usuario no pudo entender a simple vista de que se trataba los iconos de logueo además resaltó la falta de impresión visual (es decir no capturaba su atención a primera vista.)
 [_Testing_](https://photos.google.com/share/AF1QipMfDsMHE51F6IcZpFUbhM585kn1Bg9MCkBO_8O8qJZ0OTjZ6lODx7SzrVvKRhiaXA?hl=es-419&key=S2lFSjZFVzVTZmJXZnAxSFloOTd4VFd2TVQ4Q3lR)
 
