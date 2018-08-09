@@ -51,7 +51,7 @@ const writeNewPost = (uid, displayName, photoURL, mensaje, isPublic, likes) => {
       photoURL: photoURL,
       mensaje: mensaje,
       isPublic: isPublic,
-      likes: likes
+      likes: 1
     };  
     // Get a key for a new Post
     let newPostKey = firebase.database().ref().child('posts').push().key;
@@ -72,7 +72,7 @@ const editar = (userUid, postUid) => {
         photoURL: currentUser.photoURL,
         mensaje: document.getElementById('post-'+postUid).value,
         isPublic: document.getElementById('sel').value === 'Publico' ? true : false ,
-        likes: 0
+        likes: 1
     };  
     let updates = {};
     updates['/posts/' + postUid] = postData;
@@ -91,6 +91,20 @@ const eliminar = (userUid, postUid) => {
        console.log('Se procedió a cancelar la eliminación');
     }
 }
+// Contador de likes 
+let contador = 0;
+function sumLikes(post) {
+  console.log("imprime")
+  contador = contador + 1;
+  const showLikes = document.getElementById('showLikes');
+  showLikes.innerHTML = contador;
+  const btnLike = document.getElementById('btnLikes');
+  btnLike.disabled = true;
+  
+}
+/* const  likes = (userUid, postUid) => {
+console.log(postUid);
+} */
 
 const listAllPost = () => {
     let data = '';
@@ -117,10 +131,10 @@ const listAllPost = () => {
                                 ${ posts[post].uid === currentUser.uid ? `
                                     <div class="row divTextAreaActions">
                                         <div class="col-12">
-                                            <input id="btnEditar" type="button" class="btn btn-primary" value="Editar" onClick="editar('${currentUser.uid}','${postKeys[index]}')">
+                                            <input id="btnEditar" type="button" class="btn btn-primary" value="Editar" onClick="editar('${postKeys[index]}')">
                                             <input id="btnEliminar" type="button" class="btn btn-primary" value="Eliminar" onClick="eliminar('${currentUser.uid}','${postKeys[index]}')">
                                             <input id="btnLikes" type="button" class="btn btn-secundary like-review" onClick="likes('${currentUser.uid}','${postKeys[index]}')"<i class="fa fa-heart" aria-hidden="true"></i>>
-                                            
+                                            <p id='count'>${posts[post].likes}</p>
                                         </div>
                                     </div>
                                 ` : '' }
