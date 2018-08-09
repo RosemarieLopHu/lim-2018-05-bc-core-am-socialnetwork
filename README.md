@@ -48,13 +48,13 @@ A continuación una lista redes sociales del Perú con el enfoque a comida salud
 
     ![Vista Benchmark](dist/img/Lienzo.png)
 
-Revisando a nuestras competencias podemos concluir que nuestra página tiene que tener una interfaz comun o similar a las redes sociales de Facebook e Instagram, para que al usuario se le haga mas familiar.A la vez observamos que debe tener un área para que en usuario comente.
-En el siguinte link se observará nuestra [_definición del producto._](https://docs.google.com/document/d/1q-1k9ianTY0HQ5LOBt10V5K4uRi4vdY1YQ5ix7Af2Ko/edit#heading=h.kjleo72egggi)
+Revisando a nuestras competencias podemos concluir que nuestra página tiene que tener una interfaz común o similar a las redes sociales de Facebook e Instagram, para que al usuario se le haga más familiar. A la vez observamos que debe tener un área para que en usuario comente.
+En el siguinte link se observará las preguntas que se hizo el grupo de trabajo para la [_definición del producto._](https://docs.google.com/document/d/1q-1k9ianTY0HQ5LOBt10V5K4uRi4vdY1YQ5ix7Af2Ko/edit#heading=h.kjleo72egggi)
 ## Entrevistas con Usuarios
 Cabe recalcar que el significado de las entrevistas es fundamental y que a menudo se pasa por alto, tienen un efecto importante en la calidad resultante del diseño final del producto, las entrevistas nos ayudan de tal manera que no tan sólo nos permite crear algo que solucione el problema sino de entender el problema tan bien que la solución es obvia. 
 
 ### Primera Etapa
-En esta etapa se entrevistó [_Guía de Preguntas_](https://docs.google.com/document/d/1IVTIRscBjaOJ-iRdKuzheZZGPZMZa_wzOBlvBLzHWZI/edit) a los futuros usuarios, consultando sobre su estilo de vida alimentacia, obteniendo así respuestas con un factor común (necesidad a cubrir).
+En esta etapa se entrevistó a los futuros usuarios con una [_Guía de Preguntas_](https://docs.google.com/document/d/1IVTIRscBjaOJ-iRdKuzheZZGPZMZa_wzOBlvBLzHWZI/edit) que sirvió de base para la fluidez de la entrevista, consultando sobre su estilo de vida alimentacia, obteniendo así respuestas con un factor común (necesidad a cubrir).
 
 ![Definición del Problema](dist/img/Problm.jpg)
 
