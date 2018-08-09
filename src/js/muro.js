@@ -40,6 +40,7 @@ if(btnSave){
         const isPublic = document.getElementById('sel').value === 'Publico' ? true : false ;
         writeNewPost(currentUser.uid, currentUser.displayName, currentUser.photoURL, mensaje.trim(), isPublic, 0);
         post.value = '';
+
     });
 }
 
@@ -76,6 +77,15 @@ const editar = (userUid, postUid) => {
         console.log('Se procedió a cancelar la edicion');
     }
 }
+// Guardar post editados
+const savePostEdit = (userUid , postUid) => {
+    
+
+}
+/*document.getElementById('guardar');  */
+
+
+
 //Likes
 const updateLikes = (userUid, postUid) => {
     let like = parseInt(document.getElementById('like-'+postUid).innerHTML);
@@ -130,6 +140,8 @@ const listAllPost = () => {
                             ${ posts[post].uid === currentUser.uid ? `
                             <input id="btnEliminar" type="button" class="float-right btn btn-primary button-action-eliminar" value="Eliminar" onClick="eliminar('${currentUser.uid}','${postKeys[index]}')">
                             <input id="btnEditar" type="button" class="float-right btn btn-primary button-action-editar" value="Editar" onClick="editar('${currentUser.uid}','${postKeys[index]}')">
+                            <input id="saveEditPost" type="button" class="float-right btn btn-primary button-action-editar" value="Guardar" onClick="saveEditPost('${currentUser.uid}','${postKeys[index]}')">
+
                             ` : '' }
                         </div>
                     </div>
@@ -161,6 +173,8 @@ const listAllPost = () => {
                                     ${ posts[post].uid === currentUser.uid ? `
                                     <input id="btnEliminar" type="button" class="float-right btn btn-primary button-action-eliminar" value="Eliminar" onClick="eliminar('${currentUser.uid}','${postKeys[index]}')">
                                     <input id="btnEditar" type="button" class="float-right btn btn-primary button-action-editar" value="Editar" onClick="editar('${currentUser.uid}','${postKeys[index]}')">
+                                    <input id="saveEditPost" type="button" class="float-right btn btn-primary button-action-editar" value="Guardar" onClick="saveEditPost('${currentUser.uid}','${postKeys[index]}')">
+
                                     ` : '' }
                                 </div>
                             </div>
