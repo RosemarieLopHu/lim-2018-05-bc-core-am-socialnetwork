@@ -1,8 +1,3 @@
-/* import { assert } from 'chai';
-global.window = global;
-global.firebase = require('firebase');
-import "../muro.spec.js";
- */
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,7 +14,7 @@ import "../muro.spec.js";
       const { assert } = chai;
       mocha.setup('bdd');
     </script>
-    <script src="./data.spec.js"></script>
+    <script src="./main.spec.js"></script>
     <script>
       mocha.checkLeaks();
       mocha.run();
