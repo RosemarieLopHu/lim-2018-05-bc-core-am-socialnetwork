@@ -15,7 +15,7 @@ if (btnRegistro) {
 }
 // LOGIN EMAIL / PASSWORD
 if (btnLogin) {
-  btnLogin.addEventListener('click', (e) => { ;
+  btnLogin.addEventListener('click', (e) => { 
   e.preventDefault();
   emailValidation(inputEmail.value, inputPassword.value); })
 }
@@ -33,7 +33,7 @@ if (btnGoogle) {
     google();
   });
 }
-// Cerrar Sesión
+// CERRAR SESIÓN
 if (btnLogout) {
   btnLogout.addEventListener('click', (e) => {
   e.preventDefault(); 

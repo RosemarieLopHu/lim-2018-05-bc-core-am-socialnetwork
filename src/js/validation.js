@@ -19,7 +19,7 @@ const emailValidation = (email,password)=>{
 }
 
 const registroValidation = (email,password)=>{
-  if (email.trim().length === 0 || password.trim().length === 0) {
+  if (email.length === 0 || password.length === 0) {
     showMessage('dangerMessage', 'Debe de ingresar email y contraseña');
     return;
   }  
@@ -35,3 +35,6 @@ const registroValidation = (email,password)=>{
     registro(email,password);
   }
 }
+
+window.emailValidation = emailValidation;
+window.registroValidation = registroValidation;
