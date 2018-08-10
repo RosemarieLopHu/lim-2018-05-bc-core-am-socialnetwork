@@ -36,5 +36,6 @@ const registroValidation = (email,password)=>{
   }
 }
 
+
 window.emailValidation = emailValidation;
 window.registroValidation = registroValidation;
