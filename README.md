@@ -45,11 +45,11 @@ A continuación una lista redes sociales del Perú con el enfoque a comida salud
 [_Fuente_](https://peru21.pe/vida/vida-saludable-conoce-paginas-facebook-comparten-consejos-vida-saludable-393140)
     * **Tabla de las estadísticas en redes de los principales negocios**
         
-        ![Vista 1](dist/Tabla.png)
+        ![Vista 1](src/img/Tabla.png)
 
     * **Modelo de Negocio de empresas en el rubro de Alimentación Saludable**
 
-        ![Vista Benchmark](dist/Lienzo.png)
+        ![Vista Benchmark](src/img/Lienzo.png)
 
 Revisando a nuestras competencias podemos concluir que nuestra página tiene que tener una interfaz común o similar a las redes sociales de Facebook e Instagram, para que al usuario se le haga más familiar. A la vez observamos que debe tener un área para que en usuario comente.
 En el siguinte link se observará las preguntas que se hizo el grupo de trabajo para la [_definición del producto._](https://docs.google.com/document/d/1q-1k9ianTY0HQ5LOBt10V5K4uRi4vdY1YQ5ix7Af2Ko/edit#heading=h.kjleo72egggi)
@@ -59,7 +59,7 @@ Cabe recalcar que el significado de las entrevistas es fundamental y que a menud
 ### Primera Etapa
 En esta etapa se entrevistó a los futuros usuarios con una [_Guía de Preguntas_](https://docs.google.com/document/d/1IVTIRscBjaOJ-iRdKuzheZZGPZMZa_wzOBlvBLzHWZI/edit) que sirvió de base para la fluidez de la entrevista, consultando sobre su estilo de vida alimentacia, obteniendo así respuestas con un factor común (necesidad a cubrir).
 
-![Definición del Problema](dist/Problm.jpg)
+![Definición del Problema](src/img/Problm.jpg)
 
 ### Segunda Etapa
 Luego de la comprensión del problema a resolver y la interpretación de las necesidades se procede con la arquitectura de la información documentada.
@@ -89,7 +89,7 @@ En esta fase el usuario no pudo entender a simple vista de que se trataba los ic
 
 **Conclusión:**
 
-![Test a Usuarios](dist/interview.png)
+![Test a Usuarios](src/img/interview.png)
 
 Para esta etapa se utilizaron las siguientes técnicas:
 * Crítica de diseño con usuarios y clientes (Critic design).

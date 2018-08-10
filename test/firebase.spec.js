@@ -1,19 +1,28 @@
-const assert = require('chai').assert;
-global.window = global;
 const firebasemock = require('firebase-mock');
+
 const mockauth = new firebasemock.MockFirebase();
 const mockdatabase = new firebasemock.MockFirebase();
 mockdatabase.autoFlush();
 mockauth.autoFlush();
+
 global.firebase = firebasemock.MockFirebaseSdk(
-path => path ? mockdatabase.child(path) : mockdatabase,
-() => mockauth
+  path => (path ? mockdatabase.child(path) : mockdatabase),
+  () => mockauth,
 );
-//cuando se usa un mock ya no se necesita configurar firebaseAdmin, porue todo lo ejecuta el mock (el impostor)
-require("../src/model");
+
+const modelTest = require('./model.spec');
+
+// cuando usamos un mock, ya no necesitamos configurar ni firebaseAdmin
+// ni un entorno distinto para testeo, toda la logica de firebase se
+// ejecuta a traves de su mock (impostor)
+
+describe('Modelo de la lista de tareas', modelTest);
+/* );
+//cuando se usa un mock ya no se necesita configurar firebaseAdmin, porque todo lo ejecuta el mock (el impostor)
+require("../src/js/firebase");
 describe("Modelo de la lista de tareas", // se empieza por lo general
-  () => { describe("La lista, me debería permitir agregar tareas",() => {
-    it("Debería agregar una tarea", (done) => { addTask("Comprar pan").then((task) => {
+  () => { describe("logIn",() => {
+    it("Debería ser una funcion global", (done) => { addTask("Comprar pan").then((task) => {
       return getTaskList();
     }).then((taskList) => {
         const comprarPan = Object.entries(taskList.val()).find( task => {
@@ -41,5 +50,5 @@ describe("Modelo de la lista de tareas", // se empieza por lo general
       });
     describe("La lista, me debería permitir borrar una tarea", () => {
       });
-});
+}); */
 

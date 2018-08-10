@@ -10,7 +10,7 @@ const emailValidation = (email,password)=>{
     return;   
   }
   if (password.length<7){
-    alert('La contraseña debe ser mayor de 6 caracteres'); 
+    alert('La contraseña debe ser mayor de 7 caracteres'); 
     return; 
   }
   else {
@@ -28,7 +28,7 @@ const registroValidation = (email,password)=>{
     return;   
   }
   if (password.length<7){
-    alert('La contraseña debe ser mayor de 6 caracteres'); 
+    alert('La contraseña debe ser mayor de 7 caracteres'); 
     return; 
   }
   else {
