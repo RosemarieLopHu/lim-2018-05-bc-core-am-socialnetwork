@@ -29,13 +29,8 @@ const emailValidation = (email,password)=>{
     return false;   
   }
   if (password.length<7){
-<<<<<<< HEAD
-    alert('La contraseña debe ser mayor de 7 caracteres'); 
-    return; 
-=======
   //  alert('La contraseña debe ser mayor de 6 caracteres'); 
     return false; 
->>>>>>> f9ca99f269ba0cb71d15a2b13dc11e668639328f
   }
   else {
     //login(email,password);
